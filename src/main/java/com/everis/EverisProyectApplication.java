@@ -1,0 +1,14 @@
+package com.everis;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EverisProyectApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EverisProyectApplication.class, args);	
+		
+	}
+	
+}
