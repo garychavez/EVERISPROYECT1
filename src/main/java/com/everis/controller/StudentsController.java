@@ -32,31 +32,31 @@ public class StudentsController {
 //Annotations are used for CRUD methods
 	
 	@PostMapping("/Save")
-	public Students save(@RequestBody Students students) {
+	public Students save(@RequestBody Students students) throws Exception {
 		return studentsService.save(students);
 	}
 
 	
 	@PutMapping("/Update")
-	public Students update(@RequestBody Students students) {
+	public Students update(@RequestBody Students students) throws Exception {
 		return studentsService.update(students);
 	}
 
 	
 	@DeleteMapping("/Delete/{id}")
-	public void delete(@PathVariable("id") Integer id) {
+	public void delete(@PathVariable("id") Integer id) throws Exception {
 		studentsService.delete(id);
 	}
 
 	
 	@GetMapping("/Get/{id}")
-	public Optional<Students> get(@PathVariable("id") Integer id) {
+	public Optional<Students> get(@PathVariable("id") Integer id) throws Exception {
 		return studentsService.get(id);
 	}
 
 	
 	@GetMapping("/Get")
-	public List<Students> findAll() {
+	public List<Students> findAll() throws Exception {
 		return studentsService.findAll(null);
 
 	}

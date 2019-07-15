@@ -9,13 +9,13 @@ public interface StudentsService {
 
 //the CRUD methods are created	
 	
-	Students save(Students model);
+	Students save(Students model) throws Exception;
 
-	Students update(Students model);
+	Students update(Students model) throws Exception;
 	
-	void delete(Integer id);
+	void delete(Integer id) throws Exception;
 
-	Optional<Students> get(Integer id);
+	Optional<Students> get(Integer id) throws Exception;
 
-	List<Students> findAll(Students model);
+	List<Students> findAll(Students model)throws Exception ;
 }

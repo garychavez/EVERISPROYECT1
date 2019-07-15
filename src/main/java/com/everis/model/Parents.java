@@ -36,10 +36,10 @@ public class Parents  implements Serializable{
 		 @ManyToMany(cascade = { CascadeType.ALL })
 		    @JoinTable(
 		        name = "Student_Parents", 
-		        joinColumns = { @JoinColumn(name = "parent_id") }, 
-		        inverseJoinColumns = { @JoinColumn(name = "student_id") }
+		        joinColumns = { @JoinColumn(name = "parent_id", referencedColumnName = "parent_id") }, 
+		        inverseJoinColumns = { @JoinColumn(name = "student_id", referencedColumnName = "student_id") }
 		    )
-		Set<Students> students = new HashSet<>();
+		private Set<Students> students = new HashSet<>();
 		
 		
 		
@@ -62,7 +62,7 @@ public class Parents  implements Serializable{
 		private String last_name;
 		
 		@Column(name = "other_parent_details" )
-		@NotBlank
+	@NotBlank
 		private String other_parent_details;
 	
 
