@@ -32,31 +32,31 @@ public class FamilyMembersController {
 //Annotations are used for CRUD methods
 	
 	@PostMapping("/Save")
-	public FamilyMembers save(@RequestBody FamilyMembers familyMembers) {
+	public FamilyMembers save(@RequestBody FamilyMembers familyMembers) throws Exception {
 		return familyMembersService.save(familyMembers);
 	}
 
 	
 	@PutMapping("/Update")
-	public FamilyMembers update(@RequestBody FamilyMembers familyMembers) {
+	public FamilyMembers update(@RequestBody FamilyMembers familyMembers) throws Exception {
 		return familyMembersService.update(familyMembers);
 	}
 
 	
 	@DeleteMapping("/Delete/{id}")
-	public void delete(@PathVariable("id") Integer id) {
+	public void delete(@PathVariable("id") Integer id) throws Exception {
 		familyMembersService.delete(id);
 	}
 
 	
 	@GetMapping("/Get/{id}")
-	public Optional<FamilyMembers> get(@PathVariable("id") Integer id) {
+	public Optional<FamilyMembers> get(@PathVariable("id") Integer id) throws Exception {
 		return familyMembersService.get(id);
 	}
 
 	
 	@GetMapping("/Get")
-	public List<FamilyMembers> findAll() {
+	public List<FamilyMembers> findAll() throws Exception {
 		return familyMembersService.findAll(null);
 
 	}

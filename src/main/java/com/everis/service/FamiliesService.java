@@ -9,13 +9,13 @@ public interface FamiliesService {
 
 //the CRUD methods are created	
 	
-	Families save(Families model);
+	Families save(Families model) throws Exception;
 
-	Families update(Families model);
+	Families update(Families model)throws Exception ;
 
-	void delete(Integer id);
+	void delete(Integer id) throws Exception;
 
-	Optional<Families> get(Integer id);
+	Optional<Families> get(Integer id) throws Exception;
 
-	List<Families> findAll(Families model);
+	List<Families> findAll(Families model) throws Exception;
 }
