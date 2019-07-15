@@ -1,4 +1,4 @@
-package com.everis.proyect;
+package com.everis.project;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
