@@ -3,6 +3,8 @@ package com.everis.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,25 +34,25 @@ public class StudentsController {
 //Annotations are used for CRUD methods
 	
 	@PostMapping("/Save")
-	public Students save(@RequestBody Students students) throws Exception {
+	public Students save(@Valid@RequestBody Students students) throws Exception {
 		return studentsService.save(students);
 	}
 
 	
 	@PutMapping("/Update")
-	public Students update(@RequestBody Students students) throws Exception {
+	public Students update(@Valid@RequestBody Students students) throws Exception {
 		return studentsService.update(students);
 	}
 
 	
 	@DeleteMapping("/Delete/{id}")
-	public void delete(@PathVariable("id") Integer id) throws Exception {
+	public void delete(@Valid@PathVariable("id") Integer id) throws Exception {
 		studentsService.delete(id);
 	}
 
 	
 	@GetMapping("/Get/{id}")
-	public Optional<Students> get(@PathVariable("id") Integer id) throws Exception {
+	public Optional<Students> get(@Valid@PathVariable("id") Integer id) throws Exception {
 		return studentsService.get(id);
 	}
 
