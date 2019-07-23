@@ -20,7 +20,7 @@ import com.everis.model.Students;
 import com.everis.service.StudentsService;
 
 @RestController
-@RequestMapping("/Students")
+@RequestMapping
 
 
 public class StudentsController {
